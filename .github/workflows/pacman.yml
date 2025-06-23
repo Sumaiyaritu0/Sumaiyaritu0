@@ -1,4 +1,4 @@
-name: GitHub Actions Permission Test
+name: GitHub Actions Permission test
 
 on:
   workflow_dispatch:
