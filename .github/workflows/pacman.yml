@@ -1,22 +1,19 @@
-# This is the fixed pacman.yml file
-
-name: Generate Pacman Contribution SVG
+name: GitHub Actions Permission Test
 
 on:
-  schedule:
-    - cron: "0 0 * * *" # Runs every day at midnight
-  workflow_dispatch: # Allows you to run it manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-    name: Generate Pacman SVG
     steps:
-      - uses: actions/checkout@v4
-      # This is the fix: Using an updated, working version of the tool
-      - uses: ashutosh00710/profile-readme-generation@main
+      - name: Test Step 1 - Use Official Checkout Action
+        uses: actions/checkout@v4
+
+      - name: Test Step 2 - Use Official Node.js Action
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch_name: "output"
-          commit_message: "feat: update pacman contribution graph"
-          feed_list: ""
+          node-version: '20'
+
+      - name: Test Step 3 - Report Success
+        run: echo "SUCCESS: Official GitHub actions are working correctly."
