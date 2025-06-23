@@ -1,0 +1,19 @@
+name: Generate Pacman Contribution SVG
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+  workflow_dispatch: # Allows you to run it manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate Pacman SVG
+    steps:
+      - uses: actions/checkout@v3
+      - uses: maurodesouza/profile-readme-generation@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch_name: "output"
+          commit_message: "feat: update pacman contribution graph"
+          feed_list: ""
