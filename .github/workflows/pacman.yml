@@ -1,3 +1,5 @@
+# This is the fixed pacman.yml file
+
 name: Generate Pacman Contribution SVG
 
 on:
@@ -10,8 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate Pacman SVG
     steps:
-      - uses: actions/checkout@v3
-      - uses: maurodesouza/profile-readme-generation@v1
+      - uses: actions/checkout@v4
+      # This is the fix: Using an updated, working version of the tool
+      - uses: ashutosh00710/profile-readme-generation@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch_name: "output"
