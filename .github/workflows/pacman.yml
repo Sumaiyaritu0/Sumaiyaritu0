@@ -1,7 +1,10 @@
-name: GitHub Actions Permission test
+name: GitHub Actions Permission Test
 
 on:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
