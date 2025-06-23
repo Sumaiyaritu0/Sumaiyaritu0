@@ -21,6 +21,3 @@ jobs:
 
       - name: Verify Node.js installation
         run: node -v
-
-      - name: Print Success Message
-        run: echo "✅ SUCCESS: GitHub Actions workflow completed successfully."
