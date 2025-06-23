@@ -1,23 +1,20 @@
-name: GitHub Actions Permission Test
+name: Generate Pacman Contribution SVG
 
 on:
-  workflow_dispatch:
-
-permissions:
-  contents: read
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+  workflow_dispatch: # Allows you to run it manually
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-
+    name: Generate Pacman SVG
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js 20.x
-        uses: actions/setup-node@v4
+      - name: Generate Pacman SVG using local action
+        uses: ./.github/actions/pacman-generator
         with:
-          node-version: '20'
-
-      - name: Verify Node.js installation
-        run: node -v
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch_name: "output"
+          commit_message: "feat: update pacman contribution graph"
