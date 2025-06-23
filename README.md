@@ -1,4 +1,6 @@
-<h1 align="center">Hey 👋, What's Up?</h1>
+<h1 align="center">Hey ❤️, What's Up?</h1>
+
+<br>
 
 <div align="center">
   <img src="https://skillicons.dev/icons?i=ts" height="60" alt="typescript logo"  />
@@ -22,6 +24,8 @@
   <img src="https://skillicons.dev/icons?i=aws" height="60" alt="amazonwebservices logo"  />
 </div>
 
+<br>
+
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
   <a href="https://www.linkedin.com/in/your_linkedin_username" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="linkedin logo"  />
@@ -37,10 +41,14 @@
   </a>
 </div>
 
+<br><br>
+
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=Sumaiyaritu0&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph" />
   <img src="https://github-profile-trophy.vercel.app?username=Sumaiyaritu0&theme=dracula&column=-1&row=1&margin-w=8&margin-h=8&no-bg=false&no-frame=false&order=4" height="150" alt="trophy graph"  />
 </div>
+
+<br>
 
 <!-- Snake Animation -->
 <div align="center">
