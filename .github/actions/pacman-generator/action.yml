@@ -1,0 +1,32 @@
+name: 'Profile Readme Generator'
+description: 'Generate profile readme with latest posts and pacman image'
+author: 'ashutosh00710'
+inputs:
+  github_token:
+    description: 'GitHub token'
+    required: true
+  feed_list:
+    description: 'List of rss feed urls'
+    required: false
+  max_post_count:
+    description: 'Max post count to show'
+    required: false
+    default: 5
+  readme_path:
+    description: 'Readme file path'
+    required: false
+    default: 'README.md'
+  commit_message:
+    description: 'Commit message'
+    required: false
+    default: 'feat: update readme with latest posts'
+  branch_name:
+    description: 'branch name to push changes'
+    required: false
+    default: 'main'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: 'gift'
+  color: 'green'
